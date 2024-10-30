@@ -52,32 +52,21 @@ const PieChart = () => {
 
 
     const data = {
-        labels: uniqueDisplay?.map((product)=> product.brand),
+        labels: uniqueDisplay?.slice(0, 3).map((product)=> product.brand),
         datasets: [
           {
             label: 'Rating',
-            data: uniqueDisplay?.map((product)=> product.rating),
+            data: uniqueDisplay?.slice(0,3).map((product)=> product.rating),
             backgroundColor: [
                 'rgb(80, 200, 170)',
-                'rgba(255, 99, 132, 0.6)', // Red
-                'rgba(54, 162, 235, 0.6)', // Blue
-                'rgba(255, 206, 86, 0.6)', // Yellow
-                'rgba(75, 192, 192, 0.6)', // Green
-                'rgba(153, 102, 255, 0.6)', // Purple
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)', 
+                'rgba(255, 206, 86, 0.6)', 
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
                 'rgba(255, 159, 64, 0.6)',
-                'rgba(54, 162, 235, 0.6)', // Blue
+                'rgba(54, 162, 235, 0.6)',
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(153, 102, 255, 1)',
-              ],
               borderWidth: 2
           },
         ],
@@ -106,7 +95,7 @@ const PieChart = () => {
   
         
     return (
-        <div className='m-auto rounded-lg bg-white w-full min-h-80 flex'>
+        <div className='m-auto rounded-lg bg-white w-full min-h-80 flex p-4'>
             <Pie data={data} options={options} />
         </div>
     )

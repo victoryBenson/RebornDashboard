@@ -137,7 +137,7 @@ const BubbleChart = () => {
   
         
     return (
-        <div className='m-auto rounded-lg bg-white w-full min-h-80 flex'>
+        <div className='m-auto rounded-lg bg-white w-full min-h-80 flex p-4'>
             <Bubble  data={data} options={options} />
         </div>
     )

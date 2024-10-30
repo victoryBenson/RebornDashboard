@@ -48,11 +48,11 @@ const PolarAreaChart = () => {
 
 
     const data = {
-        labels: uniqueDisplay?.map((product)=> product.brand),
+        labels: uniqueDisplay?.slice(0,6).map((product)=> product.brand),
         datasets: [
           {
             label: 'Rating',
-            data: uniqueDisplay?.map((product)=> product.rating),
+            data: uniqueDisplay?.slice(0,6).map((product)=> product.rating),
             backgroundColor: [
                 'rgb(80, 200, 120)',
                 'rgb(10, 500, 170)',

@@ -1,0 +1,95 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com",
+        "address": "123 Main St, Anytown",
+        "orders": [1, 2]
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "address": "456 Maple St, Othertown",
+        "orders": [3]
+      }
+    ],
+    "restaurants": [
+      {
+        "id": 1,
+        "name": "Pizza Palace",
+        "address": "101 Pizza Ave",
+        "cuisineType": "Italian",
+        "menu": [
+          {
+            "id": 1,
+            "name": "Margherita Pizza",
+            "description": "Classic pizza with tomatoes, mozzarella, and basil",
+            "price": 12.99
+          },
+          {
+            "id": 2,
+            "name": "Pepperoni Pizza",
+            "description": "Topped with pepperoni and cheese",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Burger Barn",
+        "address": "202 Burger Blvd",
+        "cuisineType": "American",
+        "menu": [
+          {
+            "id": 1,
+            "name": "Classic Burger",
+            "description": "Beef patty with lettuce, tomato, and cheese",
+            "price": 9.99
+          },
+          {
+            "id": 2,
+            "name": "Bacon Cheeseburger",
+            "description": "Burger topped with bacon and cheese",
+            "price": 11.99
+          }
+        ]
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "userId": 1,
+        "restaurantId": 1,
+        "items": [
+          { "menuId": 1, "quantity": 2 },
+          { "menuId": 2, "quantity": 1 }
+        ],
+        "status": "Pending",
+        "totalAmount": 40.97
+      },
+      {
+        "id": 2,
+        "userId": 1,
+        "restaurantId": 2,
+        "items": [
+          { "menuId": 1, "quantity": 1 },
+          { "menuId": 2, "quantity": 1 }
+        ],
+        "status": "Delivered",
+        "totalAmount": 21.98
+      },
+      {
+        "id": 3,
+        "userId": 2,
+        "restaurantId": 1,
+        "items": [
+          { "menuId": 1, "quantity": 1 }
+        ],
+        "status": "Out for Delivery",
+        "totalAmount": 12.99
+      }
+    ]
+  }
+  
